@@ -1,0 +1,87 @@
+body {
+    background-color: rgb(0, 0, 0, 0.9);
+}
+
+.header { 
+    background: rgba(100, 149, 237, 0.8);
+    width: 100%;
+    position: fixed;
+    padding: 15px;
+    padding-left: 30px;
+    z-index: 9;
+}
+
+#display-books {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 50px;
+    grid-row-gap: 100px;
+    padding: 25px;
+    padding-top: 75px;
+
+}
+
+span {
+    color: white;
+    font-size: larger;
+    font-weight: bolder;
+    margin: auto;
+}
+
+#add-book {
+    float: right;
+    margin-right: 200px;
+    color: white;
+    background-color: rgba(100, 149, 237);
+    border-radius: 10px;
+    padding: 2px;
+}
+
+#book-form {
+    display: none;
+    position: fixed;
+    top: 50px;
+    right: 100px;
+    border: 3px solid #f1f1f1;
+    background-color: white;
+    z-index: 9;
+}
+
+.books {
+    position: relative;
+    border-style: groove;
+    border-width: 5px;
+    border-color: silver;
+    height: 500px;
+    width: 350px;
+}
+
+.book-info {
+    border-bottom: silver;
+    border-style: groove;
+    background-color: rgb(0, 0, 0, 0.1);
+    height: 75px;
+    overflow: hidden;
+}
+
+p {
+    padding: 10px;
+    color: white;
+}
+
+.book-cover {
+    height: 425px;
+    width: 350px;
+}
+
+.delete {
+    position: absolute;
+    top: 85px;
+    left: 5px;
+    background-color: rgb(252, 250, 250);
+    color: rgb(128, 9, 9);
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}

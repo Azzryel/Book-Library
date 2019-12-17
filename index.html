@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Book Library </title>
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body>
+    <div class="header">
+        <span id="book-library"> Book Library </span>
+        <button id="add-book"> Add a Book </button>
+    </div>
+
+    <div id="book-form" >
+        <fieldset>
+            <legend> Add a book </legend>
+            Title of the book:<br>
+            <input type="text" name="booktitle" id="title" placeholder="Name of the book" required>
+            <br>
+            The author:<br>
+            <input type="text" name="author" id="author" placeholder="Author" required>
+            <br>
+            <input type="number" name="pages" id="pages" placeholder="Number of pages" min="1" required>
+            <br>
+            <select name="status" id="read" size="2">
+                <option value="true">Did not read the book</option>
+                <option value="false">Did read the book</option>
+            </select>
+            <input type="text" name="img" id="img" placeholder="Book Cover URL">
+            <br>
+            
+            <br><br>
+            <button id="add"> Add </button>
+            <button id="cancel"> Cancel </button>
+        </fieldset>
+    </div> 
+
+
+    <div class="display-books" id="display-books"></div>
+    <p class="bla">Something</p>
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
