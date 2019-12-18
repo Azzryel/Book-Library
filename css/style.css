@@ -52,7 +52,7 @@ span {
     border-style: groove;
     border-width: 5px;
     border-color: silver;
-    height: 500px;
+    height: 600px;
     width: 350px;
 }
 
@@ -70,11 +70,12 @@ p {
 }
 
 .book-cover {
-    height: 425px;
+    height: 525px;
     width: 350px;
 }
 
-.delete {
+#delete {
+    display: none;
     position: absolute;
     top: 85px;
     left: 5px;
@@ -83,5 +84,31 @@ p {
     padding: 5px;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+
+#read {
+    display: none;
+    position: absolute;
+    top: 85px;
+    left: 75px;
+    background-color: rgb(252, 250, 250);
+    color: rgb(128, 9, 9);
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+
+#read-status {
+    display: absolute;
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    top: 85px;
+    right: 5px;
 }
