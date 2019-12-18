@@ -31,12 +31,14 @@ function addBookToLibrary(book) {
 //test books
 const book1 = new Books('Eisenhorn', 'Dan Abnett', "768", "did")
 const book2 = new Books('Ravenor', 'Dan Abnett', "900", "did")
-const book3 = new Books('title', 'author', "100", "didNot")
+const book3 = new Books('The Ultramaries', 'Graham McNeill', "989", "didNot")
 const book4 = new Books('book', 'someone', "99", "did")
 book1.img = "https://images-na.ssl-images-amazon.com/images/I/51iQf9TinNL._SX324_BO1,204,203,200_.jpg";
 book2.img ="https://images-na.ssl-images-amazon.com/images/I/71tm70Ez1HL.jpg";
+book3.img = "https://dave430.files.wordpress.com/2015/10/ultramarined-omnibus.jpg";
 addBookToLibrary(book1);
 addBookToLibrary(book2);
+addBookToLibrary(book3);
 
 
 //not used now
@@ -119,7 +121,7 @@ addBookBtn.addEventListener("click", () => {
   document.getElementById("book-form").style.display = "block";
 });
 
-addBtn.addEventListener("click", () => {
+addBtn.addEventListener("click", (e) => {
   let title = document.getElementById("title").value;
   let author = document.getElementById("author").value;
   let pages = document.getElementById("pages").value;
@@ -127,22 +129,35 @@ addBtn.addEventListener("click", () => {
   let img = document.getElementById("img").value;
   let place = `${myLibrary.length}`
 
+
+  if ((title == "") || (author == "") || ( isNaN(pages)) || (pages < 1) ){
+    alert("Fill out the form");
+    return false;
+  }
+
+  if (img == "") {
+    img = "./img/book.png"
+  }
+
   let book = new Books(title, author, pages, read, img, place);
   book.status = read;
   addBookToLibrary(book)
   resetFormValue();
 });
 
+function validateForm (title, author, pages, img) {
+
+}
+
 cancelBtn.addEventListener("click", () => {
   resetFormValue();
 });
 
-
-    function remove(place) { 
+function remove(place) { 
     myLibrary.splice(place, 1);
     let div = document.querySelector(`div[data-place="${place}"]`)
     displayBooks.removeChild(div);
-    }
+  }
 
 
 function resetFormValue() {
